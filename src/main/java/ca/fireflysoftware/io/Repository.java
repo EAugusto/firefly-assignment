@@ -1,17 +1,11 @@
 package ca.fireflysoftware.io;
 
-public enum Repository {
+public class Repository {
 
-	DEFAULT("src/main/resources/");
+	public static String DEFAULT = "src/main/resources/";
 	
-	private String path;
-	
-	private Repository(String path) {
-		this.path = path;
-	}
-	
-	public String getPath() {
-		return this.path;
+	public static String getPath() {
+		return DEFAULT;
 	}
 	
 }

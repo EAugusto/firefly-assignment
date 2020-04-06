@@ -19,7 +19,7 @@ public class FileWriter {
 	private String fullPath;
 
 	public FileWriter(String path, String extension) {
-		this.fullPath = Repository.DEFAULT.getPath() + path + "." + extension;		
+		this.fullPath = Repository.DEFAULT + path + "." + extension;		
 	}
 	
 	public void delete() {

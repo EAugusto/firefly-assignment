@@ -14,7 +14,7 @@ public class FileReader {
 	private String fullPath;
 	
 	public FileReader(String path, String extension) {
-		this.fullPath = Repository.DEFAULT.getPath() + path + "." + extension;
+		this.fullPath = Repository.DEFAULT + path + "." + extension;
 	}
 
 	public IntStream readIntegers() {

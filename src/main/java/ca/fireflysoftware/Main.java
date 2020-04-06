@@ -1,6 +1,8 @@
 package ca.fireflysoftware;
 import java.io.IOException;
 
+import ca.fireflysoftware.io.Repository;
+
 /**
  * Considering that 1,000,000 random numbers with at most 7 bytes each String stored [999,999 + line break]. 
  * Max file size is 7,000,000 bytes that is equal to 6.675 MB. 
@@ -15,6 +17,11 @@ public class Main {
 	private static final String EXTENSION = "txt";
 
 	public static void main(String[] args) throws IOException {
+		
+		if(args.length == 1) {
+			Repository.DEFAULT = args[0];
+		}
+		
 		FireflyAssignment fireflyAssignment = new FireflyAssignment(VOLUME, UNSORTED_FILE_NAME, SORTED_FILE_NAME, EXTENSION);
 		fireflyAssignment.process();
 	}
